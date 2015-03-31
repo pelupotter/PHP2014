@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="js/jquery/jquery-1.7.1.min.js"></script>
+
+	<title>Prueba Tecnologo</title>
+	<style>
+	code{
+		background: #54ef45;
+		display: block;
+		border-radius: 6px;
+		padding: 24px 15px;
+	    text-align: center;
+	}
+
+	header,
+	section,
+	aside,
+	footer{
+		margin: 0.5% 1.5% 1.5% 1.5%;
+	}
+	
+	aside{
+		 float: right;
+		 width: 40%;
+	}
+
+	section{
+		 float: left; 
+		 width: 25%;
+	}
+
+	footer{
+		  clear: both; 
+	}
+
+	fieldset{
+		margin: 0;
+		border: 0;
+		padding: 20px;
+	}
+
+	fieldset label{
+		padding: 5px;
+		display: block;
+	}
+
+	
+	label{
+		 font-weight: bold;
+	}
+
+	input{
+		border-radius: 5px;
+	}
+
+	</style>
+
+	<script type="text/javascript">
+	$(document).ready(function() {
+		
+		$('#enviarPorAjax').click(function(event) {
+			/* Act on the event */
+			$.ajax({
+	            type: "POST",
+	            url: "index.php" ,
+	            data: $('#form1').serialize(),
+	            success: function(data) {
+	                alert(data);
+	            },
+	            error: function(){
+	                alert('Ocurrio un error');
+	            }
+        	});
+		});
+
+		 
+
+	});
+	</script>
+</head>
+<body>
+
+<header><code>header</code></header>
+
+<section>
+
+</section>
+<section>
+
+<!-- input[name='nombre']+(select[name="pais"]>option[value=$]{Opcion $}*3)+input[type="radio"][name="sexo"]*2+input[type="checkbox"][name="deacuerdo"]*2+input[type="submit"][name="enviar"] -->
+
+<form action="index.php" method="POST" id="form1">	
+	<fieldset>
+		<legend>Datos Personales</legend>
+			<label>Nombre:</label>
+				<input type="text" name="nombre">
+			<label>Pais:</label>	
+				<select name="pais" id="pais">
+					<option value="1">Argentina</option>
+					<option value="2">Brasil</option>
+					<option value="3">Uruguay</option>
+				</select>
+	</fieldset>
+	<fieldset>
+		<legend>Otros</legend>
+		<label>Sexo:</label>	
+			<div>
+				<input type="radio" name="sexo" value="0">Masculino</input>
+				<input type="radio" name="sexo" value="1">Femenino</input>
+			</div>
+		<label>De acuerdo:</label>
+			<div>
+				<input type="checkbox" name="deacuerdo" value="1">Si</input>
+				<input type="checkbox" name="deacuerdo" value="0">No</input>
+			</div>
+	</fieldset>
+	<fieldset>
+		<input type="submit" name="enviar">
+		<input type="button" value="enviarPorAjax" id="enviarPorAjax">
+	</fieldset>	
+	
+</form>
+</section>
+<aside><code>aside</code></aside>
+<footer><code>footer</code></footer>
+
+</body>
+</html>
