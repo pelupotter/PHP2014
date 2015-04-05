@@ -2,8 +2,8 @@ Commit develop...
 
 Esto commitea el develop
 
-loca!
+loca! de atar!!
 
 o m d
 o m develop
-o m d
+o m develop
