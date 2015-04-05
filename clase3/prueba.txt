@@ -1,5 +1,9 @@
-<<<<<<< HEAD
 Commit develop...
-=======
-comit de master..
->>>>>>> master
+
+Esto commitea el develop
+
+loco
+
+o
+o
+o
