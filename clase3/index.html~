@@ -12,8 +12,6 @@
 		padding: 24px 15px;
 	    text-align: center;
 	}
-	
-	/*Comment*/
 
 	header,
 	section,
