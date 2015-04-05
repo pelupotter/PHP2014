@@ -1,9 +1,9 @@
 Commit develop...
 
-Esto commitea el develop
+Esto commitea el master!
 
 loca!
 
 o m d
 o m develop
-o m d
+o master d
